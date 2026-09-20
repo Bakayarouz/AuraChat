@@ -1,0 +1,28 @@
+server-id: "server-1"
+
+font-and-unicode-filter:
+  enabled: true
+  # Modes: "BLOCK" (cancels message & alerts player) or "STRIP" (removes illegal characters)
+  mode: "BLOCK"
+  
+  # Regex defining allowed characters (Default: Standard English/Vietnamese, numbers, and common punctuation)
+  # Unicodes outside this set (small caps, math symbols, custom font symbols) are caught.
+  allowed-regex: "^[a-zA-Z0-9\\s!@#$%^&*()_+\\-=\\[\\]{};':\",./<>?`~|\\\\–—áàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệiíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ]*$"
+  
+  # Block Minecraft Private Use Area (PUA) ranges used by custom resource pack fonts (\uE000-\uF8FF)
+  block-pua-fonts: true
+  
+  # Rejection message sent to player when mode is BLOCK
+  blocked-message: "<red><bold>Chat Error:</bold> Custom fonts, unicode symbols, or special characters are not allowed in chat!"
+
+cross-server:
+  enabled: false
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+    password: ""
+    channel: "aurachat:cross_server"
+
+discordsrv:
+  enabled: true
+  channel-name: "global"
