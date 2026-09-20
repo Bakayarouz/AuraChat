@@ -1,0 +1,9 @@
+name: AuraChat
+version: '${version}'
+main: com.example.aurachat.AuraChat
+api-version: '1.21'
+author: Developer
+description: Optimized 1.21.1+ chat plugin with Unicode protection, DiscordSRV, and Redis cross-server support.
+
+softdepend:
+  - DiscordSRV
